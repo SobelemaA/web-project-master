@@ -1,0 +1,85 @@
+.profile-card{
+    transition: all 0.2s;
+}
+
+.profile-card:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.profile-card > .card{
+    height: 100%;
+}
+
+.profile-picture{
+    padding: 33.3333333% 0%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    background-image: url("https://i0.wp.com/ebus.ca/wp-content/uploads/2017/08/profile-placeholder.jpg?ssl=1");
+    flex: unset;
+}
+
+.like{
+    font-size: 1.5em;
+    height: 1.5em;
+    color: #ff7070;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.like > label{
+    cursor: pointer;
+}
+
+.like > label > input{
+    display: none;
+}
+
+.like > label > i{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s;
+}
+
+.like > label > input:checked ~ i.far{
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.75);
+    transition: all 0.75s ease-out;
+    pointer-events: none;
+}
+
+.like > label > input ~ i.fas{
+    opacity: 0;
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+}
+
+.like > label > input:checked ~ i.fas{
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.1s;
+}
+
+.like:active{
+    transform: scale(0.8);
+    transition: none;
+}
+
+/* #profiles:hover > .profile-card{
+    opacity: 0.75;
+}
+
+#profiles:hover > .profile-card:hover{
+    opacity: 1;
+} */
+
+input.search{
+    border-top-right-radius: 0em;
+    border-bottom-right-radius: 0em;
+}
+
+button.search{
+    border-top-left-radius: 0em;
+    border-bottom-left-radius: 0em;
+}
